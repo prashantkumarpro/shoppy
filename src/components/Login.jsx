@@ -3,8 +3,8 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router'
 
 const Login = () => {
-  const [username, setUsername] = useState('')
-  const [password, setPassword] = useState('')
+  const [username, setUsername] = useState('johnd')
+  const [password, setPassword] = useState('m38rmF$')
   const [error, setError] = useState(null)
   const [isLoading, setIsLoading] = useState(false)
 
