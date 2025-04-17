@@ -1,13 +1,16 @@
 import React from 'react'
 import Header from './components/Header'
-import { Outlet } from 'react-router'
+import { Navigate, Outlet } from 'react-router'
 
 const Root = () => {
-  return (
+  const token = localStorage.getItem('token')
+  return token ? (
     <div>
       <Header />
       <Outlet />
     </div>
+  ) : (
+    <Navigate to='/login' />
   )
 }
 

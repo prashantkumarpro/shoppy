@@ -179,21 +179,21 @@ header {
   transform: translate(-40%, -90%);
 }
 
-.form_contianer form {
+.login-page form {
   margin: 120px auto;
   width: 100%;
   display: flex;
   max-width: 320px;
   padding: 20px;
   gap: 20px;
-  background-color: rgb(26, 26, 26);
+  background-color: rgb(231, 231, 231);
   flex-direction: column;
 }
-.form_contianer form input,
+.login-page form input,
 button {
   width: 100%;
 }
-.form_contianer form input {
+.login-page form input {
   padding: 8px;
   font: inherit;
   max-width: 400px;

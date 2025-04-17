@@ -1,11 +1,16 @@
 import React, { useContext } from 'react'
-import { Link } from 'react-router'
+import { Link, useNavigate } from 'react-router'
 import '../styles/Header.css'
 import { productContext } from '../context/ProductContext'
 
 const Header = () => {
   const { cartCount } = useContext(productContext)
+  const navigate = useNavigate()
 
+  const handleLogout = () => {
+    localStorage.removeItem('token')
+    navigate('/login')
+  }
   return (
     <header>
       <nav>
@@ -39,7 +44,10 @@ const Header = () => {
               </Link>
             </li>
             <li className='nav_link'>
-              <Link to='login'>Logout</Link>
+              <h4 onClick={handleLogout}
+              style={{
+                cursor:'pointer'
+              }}>Logout</h4>
             </li>
           </ul>
         </div>
